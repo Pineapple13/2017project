@@ -16,9 +16,10 @@
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv1"
-        android:layout_weight="0.63"
+        android:layout_height="20dp"
+        android:id="@+id/tvtitle"
+        android:background="#AAFFFFFF"
+        android:layout_weight="0.14"
         tools:text="FitWork" />
 
     <Button

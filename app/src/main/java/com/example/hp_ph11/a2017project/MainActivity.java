@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void onClick(View v){
-        if(v==btsignin) {
+    public void onClick(View v) {
+        if (v == btsignin) {
             Intent i = new Intent(getBaseContext(), signin.class);
             startActivity(i);
 
-}
+        }
+    }
