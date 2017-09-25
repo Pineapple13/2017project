@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".signin" />
-        <activity android:name=".login" />
-        <activity android:name=".info"></activity>
+        <activity android:name=".BMI" />
+        <activity android:name=".info" />
+        <activity android:name=".workout" />
     </application>
 
 </manifest>

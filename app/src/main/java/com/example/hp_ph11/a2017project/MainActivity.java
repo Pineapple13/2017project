@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btlogin,btsignin;
+    Button BMI;
     TextView tv1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onClick(View v) {
-        if (v == btsignin) {
-            Intent i = new Intent(getBaseContext(), signin.class);
+        if (v == BMI) {
+            Intent i = new Intent(getBaseContext(), BMI.class);
             startActivity(i);
 
+        }
+        public boolean onCreateOptionsMenu(Menu menu) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.game_menu, menu);
+            return true;
         }
     }

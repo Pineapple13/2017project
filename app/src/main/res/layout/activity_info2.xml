@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_info2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,28 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:background="@drawable/pineapple"
-    tools:context="com.example.hp_ph11.a2017project.MainActivity"
-    android:weightSum="1">
+    tools:context="com.example.hp_ph11.a2017project.info">
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:id="@+id/tvtitle"
-        android:background="#AAFFFFFF"
-        android:layout_weight="0.14"
-        tools:text="FitWork" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/btsingin"
-        tools:text="Sign in"
-        android:onClick="onClick"
-        android:layout_weight="0.02" />
-
-    
-
-
+        android:layout_height="wrap_content"
+        android:id="@+id/tvinfo"
+        android:background="#AAFFFF"
+        android:layout_margin="5dp" />
 </LinearLayout>
