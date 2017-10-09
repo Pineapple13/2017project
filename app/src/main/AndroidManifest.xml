@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BMI" />
-        <activity android:name=".info" />
-        <activity android:name=".workout" />
+        <activity android:name=".Info" />
+        <activity android:name=".Workout" />
     </application>
 
 </manifest>

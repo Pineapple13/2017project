@@ -27,9 +27,10 @@ public class CustomAdapter extends ArrayAdapter<Item> {
         LayoutInflater imageInflater = LayoutInflater.from(getContext());
         View cuView = imageInflater.inflate(resource, parent, false);
         Item item = getItem(position);
+
         TextView title = (TextView) cuView.findViewById(R.id.textView);
         ImageView image = (ImageView) cuView.findViewById(R.id.imgPic);
-        Button btnClick = (Button) cuView.findViewById(R.id.btnClick);
+
 
         title.setText(item.getTitle());
         image.setImageResource(item.getImageId());

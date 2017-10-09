@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/info"
+<item android:id="@+id/mnInfo"
     android:title="information"/>
-    <item android:id="@+id/activity_workout"
+    <item android:id="@+id/mnWorkout"
         android:title="Workout"/>
-    <item android:id="@+id/activity_bmi"
+    <item android:id="@+id/mnBMI"
         android:title="BMI calculation"/>
+    <item android:id="@+id/mnExit"
+        android:title="Exit"/>
 
 </menu>

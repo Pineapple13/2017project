@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/pineapple"
-    tools:context="com.example.hp_ph11.a2017project.workout">
+    tools:context="com.example.hp_ph11.a2017project.Workout">
 
     <ListView
         android:layout_width="match_parent"
