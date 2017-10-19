@@ -18,7 +18,8 @@
         <activity android:name=".BMI" />
         <activity android:name=".Info" />
         <activity android:name=".Workout" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
 
 </manifest>
