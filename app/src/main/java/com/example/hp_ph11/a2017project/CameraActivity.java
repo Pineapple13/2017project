@@ -54,31 +54,44 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
     //the resultcode will be RESULT_CANCELED if the activity explicity returned that, didnt return any result, or crashed during its operation.
-        protected void onActivityresult(int requestCode, int resultcode, Intent data){
-          if (requestCode==TAKE_IMAGE && resultcode== RESULT_OK){
-              Bundle extra = data.getExtras();
-              bitmap = (Bitmap)extra.get("data");
-              imagePhoto.setImageBitmap(bitmap);
-          }else{
-            File root = Environment.getExternalStorageDirectory();
-            File file = new File(root.getAbsolutePath()+"/DCIM/Camera/img.jpg");
-            try
-            {
-                file.createNewFile();
-                FileOutputStream ostream = new FileOutputStream(file);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
-                ostream.close();
+        protected void onActivityresult(int requestCode, int resultcode, Intent data) {
+            if (requestCode == TAKE_IMAGE && resultcode == RESULT_OK) {
+                Bundle extra = data.getExtras();
+                bitmap = (Bitmap) extra.get("data");
+                imagePhoto.setImageBitmap(bitmap);
+            } else {
+                File root = Environment.getExternalStorageDirectory();
+                File file = new File(root.getAbsolutePath() + "/DCIM/Camera/img.jpg");
+                try {
+                    file.createNewFile();
+                    FileOutputStream ostream = new FileOutputStream(file);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
+                    ostream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(this, "Failed to save image, try again", Toast.LENGTH_LONG).show();
+                }
             }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-                Toast.makeText(this,"Failed to save image, try again",Toast.LENGTH_LONG).show();
-            }
-    }
+        }
 
 
       public File saveImage(Bitmap bitmap){
        File root = Environment.getExternalStorageDirectory();//internal storage  launching.
         String timeStamp = new SimpleDateFormat("yyyMMdd_HHmmss").format(new Date());
+        String filePath = root.getAbsolutePath()+"/DCIM/Camera/IMG_"+timeStamp+".jpg";
+          File file = new File(filePath);//determining the type of the file and its place.
+
+          try{
+              //if gallery not full create a file and save image.
+              file.createNewFile();//create new file to save image.
+              FileOutputStream ostream = new FileOutputStream(file);// save root in this file.
+              bitmap.compress(Bitmap.CompressFormat.JPEG,100,ostream);//compass bitmap in file
+              ostream.close();//close.
+          }
+          catch(Exception e){
+              e.printStackTrace();
+              Toast.makeText(this,"failed to save image",Toast.LENGTH_SHORT).show();
+          }
+                return file;
     }
 }
