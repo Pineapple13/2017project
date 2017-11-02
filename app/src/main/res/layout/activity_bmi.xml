@@ -20,7 +20,11 @@
         android:id="@+id/tvtitle"
         android:layout_weight="0.05"
         android:padding="5dp"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark" />
 
     <EditText
         android:layout_width="match_parent"

@@ -30,10 +30,22 @@ public class BMI extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        if (view==btBMI){
-            bmi=(etweight/(etheight*etheight));
-
-          tvanswer.setText(etweight/("Your BMI is:"etweight/(etheight*etheight),"");
+        if (view==btBMI) {
+            double weight = Double.parseDouble(etweight.getText().toString());
+            double height = Double.parseDouble(etheight.getText().toString());
+            bmi = (weight / (height * height));
+            if (bmi < 18.5){
+                tvanswer.setText("your bmi is:" + bmi + ",which means your very skinny you need a better food style and excersises");
+        }
+            if (18.5<bmi && bmi<24.99){
+                tvanswer.setText("your bmi is"+bmi+"which means you have a health weight keep on with your food and excersise life style");
+            }
+            if (25.0<bmi && bmi<29.99){
+                tvanswer.setText("your bmi is"+bmi+" which means your overweight, you need a healthier food style and excersise more");
+            }
+            else{
+                tvanswer.setText("your bmi is"+bmi+"you're obesive,you must start losing weight and eating a lot healthier");
+            }
         }
 
     }
