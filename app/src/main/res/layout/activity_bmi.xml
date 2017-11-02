@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/pineapple"
+    android:background="@drawable/backpic"
     android:orientation="vertical"
     tools:context="com.example.hp_ph11.a2017project.BMI"
     android:weightSum="1">
@@ -17,7 +17,7 @@
         android:text="BMI calculation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/title"
+        android:id="@+id/tvtitle"
         android:layout_weight="0.05"
         android:padding="5dp"
         android:layout_margin="5dp" />
@@ -52,6 +52,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/btBMI"
         android:background="#ffeef7f0"
+        android:layout_weight="0.05" />
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvanswer"
         android:layout_weight="0.05" />
 
 </LinearLayout>
