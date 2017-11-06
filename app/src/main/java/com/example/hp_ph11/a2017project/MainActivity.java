@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.mnInfo){// the code that tells every option in the menu what to do
-            Intent i = new Intent(this,Info.class);
+        if(item.getItemId() == R.id.Main){// the code that tells every option in the menu what to do
+            Intent i = new Intent(this,About.class);
             startActivity(i);
         }
-        if (item.getItemId() ==R.id.mnWorkout) {
+        if (item.getItemId() ==R.id.mnAbout) {
             Intent j = new Intent(this,Workout.class);
             startActivity(j);
         }
@@ -59,6 +59,18 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog dialog = builder.create();
             dialog.show();
             }
+        if (item.getItemId()==R.id.mnPersonalInfo){
+            Intent w = new Intent(this,MainActivity.class);
+            startActivity(w);
+        }
+        if (item.getItemId()==R.id.mnCamera){
+            Intent c = new Intent(this,MainActivity.class);
+            startActivity(c);
+        }
+        if (item.getItemId()==R.id.mnWorkout){
+            Intent e = new Intent(this,MainActivity.class);
+            startActivity(e);
+        }
 
         return true;
         }

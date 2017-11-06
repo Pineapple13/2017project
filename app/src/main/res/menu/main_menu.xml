@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/mnInfo"
-    android:title="information"/>
-    <item android:id="@+id/mnWorkout"
-        android:title="Workout"/>
+    <item android:id="@+id/mnMain"
+        android:title="Main Page"/>
+<item android:id="@+id/mnAbout"
+    android:title="About"/>
     <item android:id="@+id/mnBMI"
         android:title="BMI calculation"/>
+    <item android:id="@+id/mnPersonalInfo"
+        android:title="Personal Intformation"/>
+    <item android:id="@+id/mnCamera"
+        android:title="Camera"/>
+    <item android:id="@+id/mnWorkout"
+        android:title="Workout"/>
     <item android:id="@+id/mnExit"
         android:title="Exit"/>
+
 
 </menu>

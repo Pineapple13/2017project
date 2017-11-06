@@ -50,7 +50,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         }
         else {
             Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivity(i,SELECT_IMAGE);
+            startActivityForResult(i,SELECT_IMAGE);
         }
     }
     //the resultcode will be RESULT_CANCELED if the activity explicity returned that, didnt return any result, or crashed during its operation.
