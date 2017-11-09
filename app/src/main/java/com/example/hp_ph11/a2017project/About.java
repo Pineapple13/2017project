@@ -13,7 +13,7 @@ public class About extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info2);
+        setContentView(R.layout.activity_about);
         Intent intent= getIntent();
     }
     @Override
@@ -25,7 +25,7 @@ public class About extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.mnInfo) {// the code that tells every option in the menu what to do
+        if (item.getItemId() == R.id.mnAbout) {// the code that tells every option in the menu what to do
             Intent i = new Intent(this, About.class);
             startActivity(i);
         }
@@ -55,6 +55,15 @@ public class About extends AppCompatActivity {
             Intent w = new Intent(this, MainActivity.class);
             startActivity(w);
         }
+        if (item.getItemId() == R.id.mnPersonalInfo) {
+            Intent w = new Intent(this,Personalinfo.class);
+            startActivity(w);
+        }
+        if (item.getItemId() == R.id.mnCamera) {
+            Intent w = new Intent(this,CameraActivity.class);
+            startActivity(w);
+        }
+
         return true;
     }
 }

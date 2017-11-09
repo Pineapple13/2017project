@@ -43,21 +43,21 @@ public class BMI extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.Main){// the code that tells every option in the menu what to do
-            Intent i = new Intent(this,About.class);
+        if (item.getItemId() == R.id.mnAbout) {// the code that tells every option in the menu what to do
+            Intent i = new Intent(this, About.class);
             startActivity(i);
         }
-        if (item.getItemId() ==R.id.mnAbout) {
-            Intent j = new Intent(this,Workout.class);
+        if (item.getItemId() == R.id.mnWorkout) {
+            Intent j = new Intent(this, Workout.class);
             startActivity(j);
         }
-        if (item.getItemId()==R.id.mnBMI){
-            Intent o = new Intent(this,BMI.class);
+        if (item.getItemId() == R.id.mnBMI) {
+            Intent o = new Intent(this, BMI.class);
             startActivity(o);
         }
-        if (item.getItemId()==R.id.mnExit){
+        if (item.getItemId() == R.id.mnExit) {
 
-            AlertDialog.Builder builder=new AlertDialog.Builder(this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure you want to Exit?");
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
@@ -65,21 +65,21 @@ public class BMI extends AppCompatActivity implements View.OnClickListener{
                     finish();
                 }
             });
-            builder.setNegativeButton("No",null);
+            builder.setNegativeButton("No", null);
             AlertDialog dialog = builder.create();
             dialog.show();
         }
-        if (item.getItemId()==R.id.mnPersonalInfo){
-            Intent w = new Intent(this,MainActivity.class);
+        if (item.getItemId() == R.id.mnMain) {
+            Intent w = new Intent(this, MainActivity.class);
             startActivity(w);
         }
-        if (item.getItemId()==R.id.mnCamera){
-            Intent c = new Intent(this,MainActivity.class);
-            startActivity(c);
+        if (item.getItemId() == R.id.mnPersonalInfo) {
+            Intent w = new Intent(this,Personalinfo.class);
+            startActivity(w);
         }
-        if (item.getItemId()==R.id.mnWorkout){
-            Intent e = new Intent(this,MainActivity.class);
-            startActivity(e);
+        if (item.getItemId() == R.id.mnCamera) {
+            Intent w = new Intent(this,CameraActivity.class);
+            startActivity(w);
         }
 
         return true;
