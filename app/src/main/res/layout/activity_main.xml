@@ -6,25 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backpic"
-    tools:context="com.example.hp_ph11.a2017project.MainActivity"
-    android:weightSum="1">
+    tools:context="com.example.hp_ph11.a2017project.MainActivity">
+
 
     <TextView
-        android:text="TextView"
+        android:text="World Of Fitness"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:id="@+id/tvtitle"
-        android:background="#AAFFFFF"
-        android:layout_weight="0.06"
-        tools:text="Welcome to a more fit world"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1title"
         android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:textSize="20sp"
         android:textColor="@android:color/background_dark"
-        android:layout_margin="50dp" />
-
-
-
-
-
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_margin="20dp" />
 </LinearLayout>

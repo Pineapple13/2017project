@@ -13,11 +13,22 @@
     tools:context="com.example.hp_ph11.a2017project.About">
 
     <TextView
-        android:text="This app is built for everyone who is intrested to get in shape and have a healthier body,in this app you can calculate you BMI and have you own personal paige that contain all of your information.
- this app can benefit the ones who workout in the gym and out the gym,there are links to videos that will show you how to workout properly in the gym which means it will guide you how to use the gym devises teh right way without hurting your body,also for the ones who workout in outdoors they have a varietry amount of workout that wont cost a piny and are as affective. "
+        android:text="About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="This app is built for everyone who is intrested to get in shape and have a healthier body,in this app you can calculate you BMI and have you own personal page that contains all of your information.
+ this app can benefit the ones who workout in the gym and out the gym,there are links to videos that will show you how to workout properly in the gym which means it will guide you how to use the gym devises the right way without hurting your body,also for the ones who workout in outdoors they have a varietry amount of workout that wont cost a piny and are as affective. "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tvinfo"
         android:background="#AAFFFF"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp"
+        android:textColor="@android:color/background_dark" />
 </LinearLayout>
