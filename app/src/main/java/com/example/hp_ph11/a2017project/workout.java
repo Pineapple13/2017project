@@ -2,6 +2,7 @@ package com.example.hp_ph11.a2017project;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -84,10 +85,11 @@ public class Workout extends AppCompatActivity implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         if(i == 0){
-            Toast.makeText(this,"first item",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=VHyGqsPOUHs"));
+            startActivity(intent);
         }
         if(i == 1){
-            Toast.makeText(this,"second item",Toast.LENGTH_SHORT).show();
+
         }
     }
 }
