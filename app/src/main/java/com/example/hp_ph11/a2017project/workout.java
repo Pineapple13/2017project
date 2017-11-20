@@ -28,6 +28,7 @@ public class Workout extends AppCompatActivity implements AdapterView.OnItemClic
         items.add(new Item("Second Item", R.drawable.pineapple));
         CustomAdapter custom = new CustomAdapter(this, R.layout.custom_row, items);
         lstitems.setAdapter(custom);
+        lstitems.setOnItemClickListener(this);
         Intent intent = getIntent();
     }
 
@@ -71,11 +72,11 @@ public class Workout extends AppCompatActivity implements AdapterView.OnItemClic
             startActivity(w);
         }
         if (item.getItemId() == R.id.mnPersonalInfo) {
-            Intent w = new Intent(this,Personalinfo.class);
+            Intent w = new Intent(this, Personalinfo.class);
             startActivity(w);
         }
         if (item.getItemId() == R.id.mnCamera) {
-            Intent w = new Intent(this,CameraActivity.class);
+            Intent w = new Intent(this, CameraActivity.class);
             startActivity(w);
         }
 
@@ -84,12 +85,21 @@ public class Workout extends AppCompatActivity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        if(i == 0){
+        if (i == 0) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=VHyGqsPOUHs"));
             startActivity(intent);
         }
-        if(i == 1){
-
+        if (i == 1) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=Bs0FmuqUzwU"));
+            startActivity(intent);
+        }
+        if (i == 2) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=Bs0FmuqUzwU"));
+            startActivity(intent);
+        }
+        if (i == 3) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+            startActivity(intent);
         }
     }
 }
